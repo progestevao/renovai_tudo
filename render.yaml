@@ -1,10 +1,7 @@
-
 services:
   - type: web
     name: renovai-api
-    env: java
-    buildCommand: ./build.sh
-    startCommand: java -jar target/renovai-1.0-SNAPSHOT.jar
+    env: docker
     plan: free
     branch: main
     autoDeploy: true
