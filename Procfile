@@ -1,0 +1,1 @@
+java -jar target/renovai-1.0-SNAPSHOT.jar
