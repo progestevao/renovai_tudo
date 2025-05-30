@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RenovAI 🌿</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { verde: "#32CD32" },
+          fontFamily: { sans: ["Segoe UI", "sans-serif"] }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Fade-up animation */
+    @keyframes fade-up { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0) } }
+    .animate-fade-up { opacity: 0; animation: fade-up 600ms ease-out forwards; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-30">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <img src="renovai_logo_nome.png" alt="RenovAI" class="h-8">
+      <nav class="space-x-6 text-gray-600">
+        <a href="#hero" class="hover:text-verde transition">Início</a>
+        <a href="#sobre" class="hover:text-verde transition">Sobre</a>
+        <a href="#como" class="hover:text-verde transition">Como Funciona</a>
+        <a href="#objetivos" class="hover:text-verde transition">Objetivos</a>
+        <a href="#time" class="hover:text-verde transition">Time</a>
+        <a href="#chat" class="hover:text-verde transition">Chat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-16 space-y-16">
+
+    <!-- Hero -->
+    <section id="hero" class="bg-gradient-to-b from-green-100 to-white py-20">
+      <div class="max-w-5xl mx-auto px-6 transition-all duration-500 ease-in-out">
+        <div class="bg-white border-l-8 border-verde rounded-2xl shadow-xl hover:shadow-2xl p-12 text-center animate-fade-up" style="animation-delay:100ms;">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">RenovAI 🌱</h1>
+          <p class="text-lg md:text-xl text-gray-700 mb-6">
+            Sua assistente inteligente para um futuro mais sustentável.
+          </p>
+          <a href="#sobre" class="inline-block bg-verde text-white px-8 py-3 rounded-full hover:bg-green-700 transition">
+            Saiba Mais
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre o Projeto -->
+    <section id="sobre" class="py-16">
+      <div class="max-w-5xl mx-auto px-6 transition-all duration-500 ease-in-out">
+        <div class="bg-white border-l-8 border-verde rounded-2xl shadow-xl hover:shadow-2xl p-10 animate-fade-up" style="animation-delay:200ms;">
+          <h2 class="text-3xl font-bold text-verde mb-4 flex items-center gap-2">
+            📖 Sobre o Projeto
+          </h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            O RenovAI é um chatbot de IA especializado em sustentabilidade e energias renováveis. Responde perguntas, ensina práticas ecológicas e incentiva um consumo consciente com linguagem natural e abordagem educativa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como" class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6 transition-all duration-500 ease-in-out">
+        <div class="bg-white border-l-8 border-verde rounded-2xl shadow-xl hover:shadow-2xl p-10 animate-fade-up" style="animation-delay:300ms;">
+          <h2 class="text-3xl font-bold text-verde mb-4 flex items-center gap-2">
+            ⚙️ Como Funciona
+          </h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Utilizando a API da OpenAI, o RenovAI processa suas perguntas e gera respostas precisas sobre meio ambiente, energias limpas e práticas sustentáveis, tudo em tempo real.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objetivos -->
+    <section id="objetivos" class="py-16">
+      <div class="max-w-5xl mx-auto px-6 transition-all duration-500 ease-in-out">
+        <div class="bg-white border-l-8 border-verde rounded-2xl shadow-xl hover:shadow-2xl p-10 animate-fade-up" style="animation-delay:400ms;">
+          <h2 class="text-3xl font-bold text-verde mb-4 flex items-center gap-2">
+            🎯 Objetivos
+          </h2>
+          <ul class="list-decimal list-inside space-y-3 text-lg text-gray-700">
+            <li>Educar sobre práticas sustentáveis</li>
+            <li>Incentivar o uso de fontes renováveis</li>
+            <li>Promover consciência ecológica acessível</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosso Time -->
+    <section id="time" class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6 transition-all duration-500 ease-in-out">
+        <div class="bg-white border-l-8 border-verde rounded-2xl shadow-xl hover:shadow-2xl p-10 animate-fade-up" style="animation-delay:500ms;">
+          <h2 class="text-3xl font-bold text-verde mb-4 flex items-center gap-2">
+            👥 Nosso Time
+          </h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Desenvolvedores, designers e especialistas em meio ambiente unidos para tornar a sustentabilidade inteligente e acessível.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot -->
+    <section id="chat" class="py-16">
+      <div class="max-w-5xl mx-auto px-6 transition-all duration-500 ease-in-out">
+        <div class="bg-white border-l-8 border-verde rounded-2xl shadow-xl hover:shadow-2xl p-10 animate-fade-up" style="animation-delay:600ms;">
+          <h2 class="text-3xl font-bold text-center text-verde mb-6 flex items-center justify-center gap-2">
+            🗨️ Converse com o RenovAI
+          </h2>
+          <div id="chatbox" class="space-y-4 h-64 overflow-y-auto bg-gray-100 p-6 rounded border text-sm"></div>
+          <div class="flex gap-2 mt-6">
+            <input type="text" id="mensagem" placeholder="Digite sua pergunta..." class="flex-1 px-4 py-2 rounded border focus:outline-none focus:ring focus:ring-verde/50" />
+            <button onclick="enviar()" class="bg-verde text-white px-4 py-2 rounded hover:bg-green-700 transition">Enviar</button>
+            <button onclick="limpar()" class="text-sm text-red-600 hover:underline">Limpar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
