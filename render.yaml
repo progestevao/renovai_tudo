@@ -1,7 +1,9 @@
 services:
   - type: web
-    name: renovai-api
+    name: renovai_tudo
     env: docker
     plan: free
-    branch: main
-    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: OPENAI_API_KEY
+        value: SUA_CHAVE_AQUI
