@@ -10,6 +10,11 @@ import java.util.Map;
 public class Servidor {
     public static void main(String[] args) {
         port(4567);
+        staticFileLocation("/public"); // Serve arquivos de src/main/resources/public
+        get("/", (req, res) -> {
+    res.redirect("/index.html");
+    return null;
+});
 
         // CORS
         before((req, res) -> {
