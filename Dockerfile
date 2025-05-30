@@ -5,4 +5,5 @@ COPY . .
 
 RUN mvn clean install
 
-CMD ["java", "-jar", "target/renovai-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/renovai-1.0-SNAPSHOT-shaded.jar"]
+
