@@ -8,18 +8,15 @@ import com.google.gson.JsonParser;
 import java.util.Map;
 
 public class Servidor {
-  public static void main(String[] args) {
-    port(Integer.parseInt(System.getenv().getOrDefault("PORT", "4567")));
-    ipAddress("0.0.0.0");
-
-    // o resto do seu código...
-}
+    public static void main(String[] args) {
+        port(Integer.parseInt(System.getenv().getOrDefault("PORT", "4567")));
+        ipAddress("0.0.0.0");
 
         staticFileLocation("/public"); // Serve arquivos de src/main/resources/public
         get("/", (req, res) -> {
-    res.redirect("/index.html");
-    return null;
-});
+            res.redirect("/index.html");
+            return null;
+        });
 
         // CORS
         before((req, res) -> {
@@ -64,7 +61,7 @@ public class Servidor {
                     String m = e.getAsString().trim();
                     historico.inserir(m);
                 }
-                ultimaPergunta = arr.get(arr.size()-1).getAsString().trim();
+                ultimaPergunta = arr.get(arr.size() - 1).getAsString().trim();
 
             } else if (j.has("mensagem")) {
                 String m = j.get("mensagem").getAsString().trim();
