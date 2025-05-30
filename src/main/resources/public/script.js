@@ -92,17 +92,26 @@ function enviar() {
 // ... dentro de enviar():
 
 fetch("https://renovai-tudo-1.onrender.com/perguntar", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ historico: historicoUsuario })
+})
+.then(res => res.json())
+.then(data => {
+  const last = chatbox.lastChild;
+  if (last && last.innerText.includes("Digitando")) {
+    chatbox.removeChild(last);
+  }
+  adicionarMensagem(data.resposta);
+})
+.catch(() => {
+  const last = chatbox.lastChild;
+  if (last && last.innerText.includes("Digitando")) {
+    chatbox.removeChild(last);
+  }
+  adicionarMensagem("Erro ao se conectar com o servidor.");
+});
 
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  // envia sempre o array de perguntas para contexto
-  body: JSON.stringify({ historico: historicoUsuario })
-})
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  // envia sempre o array de perguntas para contexto
-  body: JSON.stringify({ historico: historicoUsuario })
-})
 
     .then(res => res.json())
     .then(data => {
