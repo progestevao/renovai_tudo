@@ -43,12 +43,13 @@ public class ChatBot {
             .put("temperature", 0.0)
             .put("messages", messagesArray);
 
-        HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create(API_URL))
-            .header("Authorization", "Bearer " + API_KEY)
-            .header("Content-Type", "application/json")
-            .POST(HttpRequest.BodyPublishers.ofString(requestBody.toString()))
-            .build();
+       HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create(API_URL))
+    .header("Authorization", "Bearer " + apiKey)  // ← aqui corrigido
+    .header("Content-Type", "application/json")
+    .POST(HttpRequest.BodyPublishers.ofString(requestBody.toString()))
+    .build();
+
 
         HttpClient client = HttpClient.newHttpClient();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
