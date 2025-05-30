@@ -8,8 +8,13 @@ import com.google.gson.JsonParser;
 import java.util.Map;
 
 public class Servidor {
-    public static void main(String[] args) {
-        port(4567);
+  public static void main(String[] args) {
+    port(Integer.parseInt(System.getenv().getOrDefault("PORT", "4567")));
+    ipAddress("0.0.0.0");
+
+    // o resto do seu código...
+}
+
         staticFileLocation("/public"); // Serve arquivos de src/main/resources/public
         get("/", (req, res) -> {
     res.redirect("/index.html");
