@@ -113,24 +113,6 @@ fetch("https://renovai-tudo-1.onrender.com/perguntar", {
 });
 
 
-    .then(res => res.json())
-    .then(data => {
-      // remove "Digitando..."
-      const last = chatbox.lastChild;
-      if (last && last.innerText.includes("Digitando")) {
-        chatbox.removeChild(last);
-      }
-      adicionarMensagem(data.resposta);
-    })
-    .catch(() => {
-      const last = chatbox.lastChild;
-      if (last && last.innerText.includes("Digitando")) {
-        chatbox.removeChild(last);
-      }
-      adicionarMensagem("Erro ao se conectar com o servidor.");
-    });
-}
-
 // limpa chat + histórico
 function limpar() {
   chatbox.innerHTML = "";
